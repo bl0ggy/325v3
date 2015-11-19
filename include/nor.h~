@@ -1,0 +1,19 @@
+#ifndef NOR_H
+#define NOR_H
+
+#include "logicgate.h"
+
+
+class OR : public LogicGate
+{
+	public:
+		OR(string name, unsigned int nbr_input);
+		virtual ~OR();
+
+		virtual void calculate_output();
+
+	protected:
+	private:
+};
+
+#endif // NOR_H

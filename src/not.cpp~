@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <iostream>
+
+#include "not.h"
+
+using namespace std;
+
+NOT::NOT(string name, unsigned int nbr_input):LogicGate(name,nbr_input)
+{
+	set_input(0);
+	calculate_output();
+}
+
+NOT::~NOT(){}
+
+void NOT::calculate_output(){
+	set_output((get_input()&1)?0:1);
+}
